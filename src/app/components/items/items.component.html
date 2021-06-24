@@ -1,0 +1,13 @@
+<!-- Mostra nuestro nuevos objetos creados -->
+<div class="main-container">
+    <!-- Lo mandamos a llamra nuestra vista -->
+    <app-total mensaje="Total por pagar: " [total]="total"></app-total>
+    <!-- iteracion de cada elemento -->
+    <app-item  
+    *ngFor="let item of items"
+     [item]="item"
+     (deleteItem)="deleteItem($event)"
+     (toggleItem)="toggleItem($event)"> <!-- se hace la comuncacion entre el 
+                                        componente hijo al componente padre a travez de un evento -->
+    </app-item>
+</div>

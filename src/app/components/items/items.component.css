@@ -1,0 +1,5 @@
+/* Pone al centro el contenido */
+.main-container{  
+    width: 800px;
+    margin: 0 auto; 
+}

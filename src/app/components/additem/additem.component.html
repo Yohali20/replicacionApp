@@ -1,0 +1,24 @@
+<!-- Crearemos nuestros elementos html para crear un nuevo producto -->
+<!-- Que se ejecute no cuando se de clic en el boton sino cuando enviemos el fromulario -->
+<form action="" (ngSubmit)="onSubmit()">
+    <h2>Registrar un nuevo artiulo</h2>
+    <div>
+        <label>Id del Articulo</label>
+        <input type="text" name="id" id="" [(ngModel)]="id">
+    </div>
+    <div>
+        <label>Nombre del articulo</label>
+        <!-- Validar que si se este mostrando la informacion: {{title}} -->
+        <input type="text" name="title" id="" [(ngModel)]="title">
+    </div>
+    <div>
+        <label>Precio</label>
+        <input type="text" name="price" id="" [(ngModel)]="price">
+    </div>
+    <div>
+        <label>Cantidad</label>
+        <input type="text" name="quantity" id="" [(ngModel)]="quantity">
+    </div>
+
+    <input type="submit" value="crear">
+</form>

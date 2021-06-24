@@ -1,0 +1,28 @@
+<!-- Mandamos a llmar nuestro estilo, por medio de angular y lo validamos para que si es true se agregara el
+estilo completen y si es false lo va a quitar  -->
+<div class="row" [ngClass]="{'completed': item.completed}">
+    <div class="title">
+        <!-- Se añadira un checkbox para que nos ayude a saber si el producto ya fue pagado o no -->
+        <!-- checked: Nos ayudara a saber que produto ya fue pagado -->
+        <!-- Creamos el evento del check para que al precionarlo tenga una fucnion -->
+        <!-- change: Cada ves que cambie el valor se mandara a llamr el metodo con el paramento item  -->
+        <input type="checkbox" [checked]="item.completed" (change)= "onToggle(item)" >
+        <!-- pip nos ayuda aplicarle una funcion a nuestros valores, en este caso lo estabamos
+        convirtiendo en mayusculas-->
+        {{item.title | uppercase}}
+    </div>
+    <div class="price">
+        <!-- currency: le da formato al precio -->
+        {{item.price | currency}}
+    </div>
+    <div class="quantity">
+        {{item.quantity}}
+    </div>
+    <div class="total">
+        {{(item.price * item.quantity) | currency}}
+    </div>
+    <div class="actions">
+        <!-- Boton que nos ayudara a eliminar cada componenet -->
+        <button (click)="onDelete(item)">Eliminar</button>
+    </div>
+</div>
